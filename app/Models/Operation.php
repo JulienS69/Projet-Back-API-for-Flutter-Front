@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class operations extends Model
+class Operation extends Model
 {
     protected $fillable = [
-        'Id_Op',
+        'Id_op',
         'Type',
         'DateOp',
         'Montant',
-        'Id_Compte'
+        'Id_Cpt'
     ];
     use HasFactory;
 }

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use App\Models\operations;
+use App\Models\Operation;
 use Illuminate\Http\Request;
 
 class OperationController extends Controller
@@ -11,11 +11,11 @@ class OperationController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function index()
     {
-        $operations = operations::all();
+        $operations = Operation::all();
         return response()->json(['data' => $operations]);
     }
 
